@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scholarship Application Form</title>
+</head>
+<body>
+    <form id="scholarshipForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="fullname" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <label for="category">Caste Category:</label>
+        <select id="category" name="category">
+            <option value="gen">General</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+        </select>
+        <label for="income">Annual Family Income (in ₹):</label>
+        <input type="number" id="income" name="income">
+        <button type="submit">Submit Application</button>
+    </form>
+</body>
+</html>

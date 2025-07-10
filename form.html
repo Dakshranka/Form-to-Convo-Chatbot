@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 30px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="/submit" method="POST">
+
+      <label for="fname">First Name *</label>
+      <input type="text" id="fname" name="first_name" placeholder="Enter your first name" required>
+
+      <label for="lname">Last Name *</label>
+      <input type="text" id="lname" name="last_name" placeholder="Enter your last name" required>
+
+      <label for="dob">Date of Birth *</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender *</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- Select --</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" placeholder="Your address..."></textarea>
+
+      <label for="state">State *</label>
+      <input type="text" id="state" name="state" required>
+
+      <label for="city">City *</label>
+      <input type="text" id="city" name="city" required>
+
+      <label for="pincode">Pincode *</label>
+      <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" placeholder="6-digit pincode" required>
+
+      <label for="course">Course Applied For *</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select Course --</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="B.Sc">B.Sc</option>
+        <option value="B.Com">B.Com</option>
+        <option value="BA">BA</option>
+        <option value="MBA">MBA</option>
+        <option value="M.Tech">M.Tech</option>
+      </select>
+
+      <label for="photo">Upload Photo *</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+
+      <label for="doc">Upload ID Proof *</label>
+      <input type="file" id="doc" name="id_proof" accept=".pdf,.jpg,.png" required>
+
+      <button type="submit">Submit Registration</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
